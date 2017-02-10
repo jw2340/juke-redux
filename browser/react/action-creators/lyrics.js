@@ -1,9 +1,11 @@
-import {SET_LYRICS} from '../constants.js'; 
+import {SET_LYRICS} from '../constants.js';
 
-export const setLyrics = function(text){
+const setLyrics = function(text){
 
 	return {
-		type: SET_LYRICS, 
+		type: SET_LYRICS,
 		lyrics: text
 	};
 };
+
+export default setLyrics

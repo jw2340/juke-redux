@@ -9,10 +9,12 @@ import Artist from './components/Artist';
 import Songs from './components/Songs';
 import NewPlaylistContainer from './containers/NewPlaylistContainer';
 import Playlist from './components/Playlist';
+import LyricsContainer from './containers/LyricsContainer';
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path='/' component={AppContainer} foo={'foo'}>
+      <Route path="/lyrics" component={LyricsContainer} />
       <Route path="/albums" component={Albums} />
       <Route path="/albums/:albumId" component={Album} />
       <Route path="/artists" component={FilterableArtistsContainer} />
@@ -42,4 +44,4 @@ store.dispatch(setLyrics('Never gonna give you up, never gonna let you down'));
 unsubscribe();
 
 store.dispatch(setLyrics('Hello, darkness, my old friend.'));
- 
+
