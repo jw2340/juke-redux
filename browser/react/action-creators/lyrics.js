@@ -1,11 +1,12 @@
 import {SET_LYRICS} from '../constants.js';
+import axios from 'axios';
 
 export const setLyrics = function(text){
 
-	return {
+	return ({
 		type: SET_LYRICS,
 		lyrics: text
-	};
+	});
 };
 
 
