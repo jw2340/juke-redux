@@ -31,7 +31,7 @@ ReactDOM.render(
 );
 
 import store from './store';
-import {setLyrics} from './action-creators/lyrics';
+import setLyrics from './action-creators/lyrics';
 
 const unsubscribe = store.subscribe(function () {
     console.log('----------------');

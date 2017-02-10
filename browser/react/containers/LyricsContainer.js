@@ -43,7 +43,7 @@ export default class LyricsContainer extends React.Component {
     .then(res => res.data)
     .then(song => song.lyric)
     .then(lyric => setLyrics(lyric))
-    .then(actionObj => store.dispatch(actionObj))
+    .then(actionObj => store.dispatch(actionObj));
 
     console.log(this.state);
   }

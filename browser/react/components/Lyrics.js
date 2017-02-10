@@ -11,7 +11,7 @@ const Lyrics = (props) => {
 
   return (
 
-    <form className="form-horizontal" onSusbmit={props.handleSubmit}>
+    <form className="form-horizontal" onSubmit={props.handleSubmit}>
       <input className="form-control" type="text" value={props.artistQuery} placeholder="Artist" onChange={artistChange} />
       <input className="form-control" type="text" value={props.songQuery} placeholder="Song" onChange={songChange} />
       <pre>{props.text || 'Search above!'}</pre>
