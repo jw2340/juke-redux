@@ -1,6 +1,6 @@
 import {SET_LYRICS} from '../constants.js';
 
-const setLyrics = function(text){
+export const setLyrics = function(text){
 
 	return {
 		type: SET_LYRICS,
@@ -8,4 +8,16 @@ const setLyrics = function(text){
 	};
 };
 
-export default setLyrics
+
+
+export const fetchLyrics = function (artist, song) {
+  return function (dispatch, getState) {
+    axios.get(`/api/lyrics/${artist}/${song}`)
+      .then(res => {
+        dispatch(setLyrics(res.data.lyric));
+      });
+  };
+};
+
+
+
